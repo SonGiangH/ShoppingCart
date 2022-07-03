@@ -113,11 +113,11 @@ function renderProduct(product) {
                                 onclick: function(e) {
                                 product.quantity = product.quantity - 1;
                                 renderProductList(productList);                            
-                                if (product.quantity == 0) {
+                                  if (product.quantity == 0) {
                                     const index = productList.indexOf(product)
                                     productList.splice(index, 1);
                                     renderProductList(productList);
-                                }
+                                  }                              
                                 }
                             })
                         )
@@ -130,8 +130,13 @@ function renderProduct(product) {
 
 function renderProductList(products){
     productWrapper.innerHTML ="";
+    if (products.length !== 0) {
     products.map(product => productWrapper.append(renderProduct(product)))
     productWrapper.append(renderTotalPrice())
+    } else {
+      const alert = e("p", {}, "is currently empty");
+      productWrapper.append(alert);
+    }
 }
 
 // Calculate final price
