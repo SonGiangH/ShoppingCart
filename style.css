@@ -1,0 +1,182 @@
+/* Select 4 styles of font Cormorant Garamond */
+body {
+    font-family: 'Cormorant Garamond', sans-serif!important;
+    font-size: 15px;
+    line-height:30px;
+    height:100%;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --color-heading: #b99bb6;
+    --color-body: #5f4d5d;
+    --color-background: #b08ead;
+    --color-primary: #c9adc6;
+    --color-secondary: #d6bbd3;  
+    --color-accent: #b0b0b0;
+    --gutter: 26px;
+}
+
+/*  Set up container - row - column */
+.container {
+    width: 1240px;
+    margin-left: auto;
+    margin-right: auto;                    /* thuoc tinh auto la set size phu thuoc phan tu Child element */
+
+    padding-left: calc(var(--gutter) / 2);
+    padding-right: calc(var(--gutter) / 2);
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+
+    margin-left: calc(var(--gutter) / -2);
+    margin-right: calc(var(--gutter) / -2);                      /*  Do container padding left, right with 5px               */
+}
+
+ /* Setting column width with padding and margin */
+
+ [class*="col-"] {
+  padding-left: calc(var(--gutter) / 2);
+  padding-right: calc(var(--gutter) / 2);
+  margin-top: 10px;
+}
+
+/* Column settings */
+.col-1 {
+    width: calc(100% / 12);
+  }
+  
+  .col-2 {
+    width: calc(2 * ( 100% / 12 ));
+  }
+  
+  .col-3 {
+    width: calc(3 * ( 100% / 12 ));
+  }
+  
+  .col-4 {
+    width: calc(4 * ( 100% / 12 ));
+  }
+  
+  .col-5 {
+    width: calc(5 * ( 100% / 12 ));
+  }
+  
+  .col-6 {
+    width: calc(6 * ( 100% / 12 ));
+  }
+  
+  .col-7 {
+    width: calc(7 * ( 100% / 12 ));
+  }
+  
+  .col-8 {
+    width: calc(8 * ( 100% / 12 ));
+  }
+  
+  .col-9 {
+    width: calc(9 * ( 100% / 12 ));
+  }
+  
+  .col-10 {
+    width: calc(10 * ( 100% / 12 ));
+  }
+  
+  .col-11 {
+    width: calc(11 * ( 100% / 12 ));
+  }
+  
+  .col-12 {
+    width: 100%;
+  }
+  
+  .offset-1 {
+    margin-left: calc(100% / 12);
+  }
+  
+  .offset-2 {
+    margin-left: calc(2 * ( 100% / 12 ));
+  }
+
+
+  /* utility functions */
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-left  {
+    text-align: left;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.justify-content-around {
+  justify-content: space-around;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.j-end {
+    justify-content: flex-end;
+}
+
+.j-start {
+    justify-content: flex-start;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.a-end {
+    align-items: flex-end;
+}
+
+.d-flex {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+/* Position */
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+/* Specific */
+img {
+    width: 100px;
+    height: 150px;
+}
+
+.mright-150 {
+    margin-right: 150px;
+}
